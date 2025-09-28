@@ -57,8 +57,8 @@ void findPosition() {
 * Then, display the stored details neatly.
  */
 struct car {
-    char colour;
-    char make;
+    string colour;
+    string make;
     int year;
 };
 
