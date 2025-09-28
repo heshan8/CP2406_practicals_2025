@@ -56,11 +56,25 @@ void findPosition() {
 * Ask the user about a car and store it in a struct variable.
 * Then, display the stored details neatly.
  */
-struct car {
+struct Car {
     string colour;
     string make;
     int year;
 };
+void getCar() {
+    Car carRec;
+    cout << "Please enter the colour of your car: " << endl;
+    getline(cin, carRec.colour);
+
+    cout << "Please enter the make/brand of your car: " << endl;
+    getline(cin, carRec.make);
+
+    cout << "Please enter the year of your car: " << endl;
+    cin >> carRec.year;
+
+
+}
+
 
 int main() {
     /* Exercise #1 - a program to print welcome message */
