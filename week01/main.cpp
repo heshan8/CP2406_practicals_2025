@@ -86,6 +86,30 @@ int main() {
     //conversionExample();
     //findPosition();
     //getCar();
+    int choice;
+    cout << "Choose an exercise (1-4): ";
+    cin >> choice;
+    switch (choice) {
+        case 1:
+            cout << "Running Exercise 1" << endl;
+            printGreeting();
+            break;
+        case 2:
+            cout << "Running Exercise 2" << endl;
+            conversionExample();
+            break;
+        case 3:
+            cout << "Running Exercise 3" << endl;
+            findPosition();
+            break;
+        case 4:
+            cout << "Running Exercise 4" << endl;
+            cin.ignore();
+            getCar();
+            break;
+        default:
+            cout << "Invalid choice." << endl;
+    }
 
     return 0;
 }
