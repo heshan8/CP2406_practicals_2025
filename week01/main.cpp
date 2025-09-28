@@ -52,6 +52,15 @@ void findPosition() {
     }
 }
 
+/* Exercise #4 - structure for a car
+* Ask the user about a car and store it in a struct variable.
+* Then, display the stored details neatly.
+ */
+struct car {
+    char colour;
+    char make;
+    int year;
+};
 
 int main() {
     /* Exercise #1 - a program to print welcome message */
