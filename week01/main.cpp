@@ -29,9 +29,9 @@ void findPosition() {
     cout << "Enter your salary: ";
     cin >> salary;
     int category;
-    if (salary > 60000) { //Engineer
+    if (salary < 60000) { //Engineer
         category = 1;
-    } else if (salary < 60000 && salary > 80000) { //Senior engineer
+    } else if (salary > 60000 && salary < 80000) { //Senior engineer
         /*The Only way to say between two numbers is to
          *combine two comparisons with an operator, which in this case is &&*/
         category = 2;
@@ -59,7 +59,7 @@ int main() {
     cout << "-----------------\n";
     cout << "Welcome to cp2406 2025" << endl;
     //conversionExample();
-    findPosition();
+    //findPosition();
 
     return 0;
 }
