@@ -40,14 +40,14 @@ void findPosition() {
     } else {
         category = 0;
     }
-    switch (________) {
+    switch (category) { // Salary ranges are turned into a category number
         case 1:
             cout << "Position type: Engineer" << endl; break;
         case 2:
             cout << "Position type: Senior Engineer" << endl; break;
         case 3:
             cout << "Position type: Manager" << endl; break;
-            ______:
+        default: // Default handles all the cases that aren’t listed
             cout << "Invalid position type." << endl;
     }
 }
@@ -58,6 +58,8 @@ int main() {
     cout << "Week 01 running\n"; /* to show that week 1 practical is running */
     cout << "-----------------\n";
     cout << "Welcome to cp2406 2025" << endl;
-    conversionExample();
+    //conversionExample();
+    findPosition();
+
     return 0;
 }
