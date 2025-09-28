@@ -9,7 +9,7 @@ void conversionExample() {
     float inputNumber;
     cout << "Enter a floating-point number: ";
     cin >> inputNumber;
-    int intNumber = static_cast<int>(inputNumber);
+    int intNumber = static_cast<int>(inputNumber); //converts floating number in to an integer
     cout << "Converted to integer: " << intNumber << endl;
     // Using if/else to check if the input is positive, negative or zero
     if (intNumber > 0) {
@@ -73,43 +73,39 @@ void getCar() {
     cout << "Please enter the year of your car: ";
     cin >> carRec.year;
 
-    cout << "Your car is a " << carRec.colour << " " << carRec.make << endl;
-    cout << "It was made in: " << carRec.year << endl;
+    cout << "Your car is a " << carRec.colour << " " << carRec.make << " from " << carRec.year << endl;
 }
 
 
 int main() {
-    /* Exercise #1 - a program to print welcome message */
-    cout << "Week 01 running\n"; /* to show that week 1 practical is running */
-    cout << "-----------------\n";
+    cout << "Week 01 practical running\n"; /* to show that week 1 practical is running */
+    cout << "-----------------------------\n";
     cout << "Welcome to cp2406 2025" << endl;
     //conversionExample();
     //findPosition();
     //getCar();
+
+    //text-based menu system using switch statements
     int choice;
-    cout << "Choose an exercise (1-4): ";
+    cout << "Choose an exercise (1-3): ";
     cin >> choice;
     switch (choice) {
         case 1:
             cout << "Running Exercise 1" << endl;
-            printGreeting();
+            conversionExample();
             break;
         case 2:
             cout << "Running Exercise 2" << endl;
-            conversionExample();
+            findPosition();
             break;
         case 3:
             cout << "Running Exercise 3" << endl;
-            findPosition();
-            break;
-        case 4:
-            cout << "Running Exercise 4" << endl;
             cin.ignore();
             getCar();
             break;
         default:
             cout << "Invalid choice." << endl;
-    }
 
+    }
     return 0;
 }
