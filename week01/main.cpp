@@ -2,13 +2,16 @@
 #include <iostream>
 using namespace std;
 
-/* Exercise #2 - type casting and if statements */
+/* Exercise #2 - type casting and if statements
+ * Ask the user for a decimal number and convert it to an integer
+ */
 void conversionExample() {
     float inputNumber;
     cout << "Enter a floating-point number: ";
     cin >> inputNumber;
     int intNumber = static_cast<int>(inputNumber);
     cout << "Converted to integer: " << intNumber << endl;
+    // Using if/else to check if the input is positive, negative or zero
     if (intNumber > 0) {
         cout << "The number is positive." << endl;
     } else if (intNumber < 0) {
