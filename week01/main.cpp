@@ -63,14 +63,17 @@ struct Car {
 };
 void getCar() {
     Car carRec;
-    cout << "Please enter the colour of your car: " << endl;
+    // Get user input to store in car structure
+    cout << "Please enter the colour of your car:";
     getline(cin, carRec.colour);
 
-    cout << "Please enter the make/brand of your car: " << endl;
+    cout << "Please enter the make/brand of your car: ";
     getline(cin, carRec.make);
 
-    cout << "Please enter the year of your car: " << endl;
+    cout << "Please enter the year of your car: ";
     cin >> carRec.year;
+
+    cout << "Your car is a " << carRec.colour << " " << carRec.make << " from " << carRec.year << endl;
 
 
 }
@@ -83,6 +86,7 @@ int main() {
     cout << "Welcome to cp2406 2025" << endl;
     //conversionExample();
     //findPosition();
+    getCar();
 
     return 0;
 }
