@@ -71,12 +71,26 @@ void exercise4 (int argc, char* argv[]) { // argc = argument count, argv = array
  *  Read the contents of a text file and print it to another text file.
  */
 void exercise5 () {
-    string inputFileName, outputFileName;
-
-    cout << "Enter Input File Name: " <<endl;
+    string inputFileName, outputFileName; // declaring both filenames as strings.
+    cout << "Enter Input file name: " <<endl; // Getting the filenames from user input.
     cin >> inputFileName;
-    cout << "Enter Output File Name: " <<endl;
+    cout << "Enter Output file name: " <<endl;
     cin >> outputFileName;
+
+    // Opening the input file
+    ifstream inputFile;
+    inputFile.open(inputFileName);
+    if (!inputFile) { // Checking to see if the file failed to open.
+        cout << "Input file could not be opened :(" << endl;
+        return ;
+    }
+    // Opening the output file
+    ofstream outputFile;
+    outputFile.open(outputFileName);
+    if (!inputFile) { // Error checking
+        cout << "Output file could not be opened :(" << endl;
+        return ;
+    }
 
 
 
