@@ -34,24 +34,25 @@ void exercise3() {
     int numStudents;
     cout << "Enter the number of students: ";
     cin >> numStudents;
-    float* heights = new float[_____];
+    float* heights = new float[numStudents];
     for (int i = 0; i < numStudents; ++i) {
         cout << "Student " << (i + 1) << ": ";
-        cin >> _____;
+        cin >> heights[i];
     }
     if (numStudents >= 6) {
-        cout << "The height of the 6th student is: " << _____ << endl;
+        cout << "The height of the 6th student is: " << heights[5] << endl;
     } else {
         cout << "There are less than 6 students." << endl;
     }
-    _____ heights; // Free the memory
+    delete[] heights; // Free the memory
+    // Adding [] after delete will tell the compiler to delete the array and not a single variable
 }
 
 int main() {
     cout << "Week 02 practical running\n"; /* to show that week 2 practical is running */
     cout << "-----------------------------\n";
     //integerPointer();
-    exercise2();
+    //exercise2();
 
 
     return 0;
