@@ -13,11 +13,24 @@ void integerPointer() {
     cout << "Value of age using indirection: " << *agePtr << endl; // Prints the actual value of the address (27)
 }
 
+/*Exersice #2 - Array of heights
+* Store the heights of 10 students in the class. Print the height of the 6th student.*/
+void exercise2() {
+    float heights[10]; // creates an array that stores 10 float values
+    cout << "Enter the heights of 10 students:\n";
+    for (int i = 0; i < 10; ++i) { // loop runs 10 times
+        cout << "Student " << (i + 1) << ": ";
+        cin >> heights[i];
+    }
+    cout << "The height of the 6th student is: " << heights[5] << endl;
+    // Arrays start counting at 0 therefore 5 accesses the 6th position
+}
+
 int main() {
     cout << "Week 02 practical running\n"; /* to show that week 2 practical is running */
     cout << "-----------------------------\n";
-    // Exercise #1 - Integer pointer and Indirection
-    integerPointer();
+    //integerPointer();
+    exercise2();
 
 
     return 0;
