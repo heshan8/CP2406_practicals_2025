@@ -87,7 +87,7 @@ void exercise5 () {
     // Opening the output file
     ofstream outputFile;
     outputFile.open(outputFileName);
-    if (!inputFile) { // Error checking
+    if (!outputFile) { // Error checking
         cout << "Output file could not be opened" << endl;
         return ;
     }
@@ -113,6 +113,7 @@ int main(int argc, char* argv[]) { // passing in the arguments for Exercise 4
     //exercise2();
     //exercise3();
     //exercise4(argc, argv);
+    exercise5();
 
 
     return 0;
