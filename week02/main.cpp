@@ -31,6 +31,8 @@ void exercise2() {
 students.
  */
 void exercise3() {
+    /*this could be improved by checking if numStudents >= 6
+     * before allocating the array and reading heights*/
     int numStudents;
     cout << "Enter the number of students: ";
     cin >> numStudents;
@@ -53,7 +55,7 @@ int main() {
     cout << "-----------------------------\n";
     //integerPointer();
     //exercise2();
-
+    exercise3();
 
     return 0;
 }
