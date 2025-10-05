@@ -54,25 +54,27 @@ void exercise3() {
 * Use command-line arguments to input the first and last name of a person and merge them
 into a single string.
  */
-void exercise4 (int argc, char* argv[]) {
-    if (argc < 3) {
+void exercise4 (int argc, char* argv[]) { // argc = argument count, argv = array of strings/pointers to characters.
+    if (argc < 3) { // Need at least 3 arguments (program name + first name + last name)
         cout << "Usage: " << argv[0] << " <FirstName> <LastName>" <<
         endl;
         return ;
     }
-    string firstName = _____;
-    string lastName = _____;
+    string firstName = argv[1]; // argv[0] is the progrma name, [1] is the first name and [2] is the last name
+    string lastName = argv[2];
     string fullName = firstName + " " + lastName;
-    cout << "Full name: " << _____ << endl;
+    cout << "Full name: " << fullName << endl;
 }
 
 
-int main() {
+int main(int argc, char* argv[]) { // passing in the arguments for Exercise 4
     cout << "Week 02 practical running\n"; /* to show that week 2 practical is running */
     cout << "-----------------------------\n";
     //integerPointer();
     //exercise2();
-    exercise3();
+    //exercise3();
+    exercise4(argc, argv);
+
 
     return 0;
 }
