@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 /* Exercise #1 - Integer pointer and Indirection.
@@ -60,20 +61,37 @@ void exercise4 (int argc, char* argv[]) { // argc = argument count, argv = array
         endl;
         return ;
     }
-    string firstName = argv[1]; // argv[0] is the progrma name, [1] is the first name and [2] is the last name
+    string firstName = argv[1]; // argv[0] is the program name, [1] is the first name and [2] is the last name
     string lastName = argv[2];
     string fullName = firstName + " " + lastName;
     cout << "Full name: " << fullName << endl;
 }
 
+/*Exercise #5 - File I/O
+ *  Read the contents of a text file and print it to another text file.
+ */
+void exercise5 () {
+    string inputFileName, outputFileName;
 
+    cout << "Enter Input File Name: " <<endl;
+    cin >> inputFileName;
+    cout << "Enter Output File Name: " <<endl;
+    cin >> outputFileName;
+
+
+
+}
+
+
+//Needed to find the correct .exe path for running in commandline
+//Which was PS C:\Users\hesha\CLionProjects\CP2406_practicals_2025\cmake-build-debug\week02>
 int main(int argc, char* argv[]) { // passing in the arguments for Exercise 4
     cout << "Week 02 practical running\n"; /* to show that week 2 practical is running */
     cout << "-----------------------------\n";
     //integerPointer();
     //exercise2();
     //exercise3();
-    exercise4(argc, argv);
+    //exercise4(argc, argv);
 
 
     return 0;
