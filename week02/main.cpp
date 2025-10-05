@@ -50,6 +50,23 @@ void exercise3() {
     // Adding [] after delete will tell the compiler to delete the array and not a single variable
 }
 
+/*Exercise #4 - Using command-line arguments.
+* Use command-line arguments to input the first and last name of a person and merge them
+into a single string.
+ */
+void exercise4 (int argc, char* argv[]) {
+    if (argc < 3) {
+        cout << "Usage: " << argv[0] << " <FirstName> <LastName>" <<
+        endl;
+        return ;
+    }
+    string firstName = _____;
+    string lastName = _____;
+    string fullName = firstName + " " + lastName;
+    cout << "Full name: " << _____ << endl;
+}
+
+
 int main() {
     cout << "Week 02 practical running\n"; /* to show that week 2 practical is running */
     cout << "-----------------------------\n";
