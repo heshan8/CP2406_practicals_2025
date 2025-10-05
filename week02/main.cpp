@@ -97,7 +97,9 @@ void exercise5 () {
     while (getline(inputFile, line)) {
         outputFile << line << endl;
     }
-
+    // Closing both files
+    inputFile.close();
+    outputFile.close();
 
 }
 
