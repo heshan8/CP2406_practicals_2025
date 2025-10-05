@@ -22,8 +22,29 @@ void exercise2() {
         cout << "Student " << (i + 1) << ": ";
         cin >> heights[i];
     }
+    // Arrays start counting at 0 therefore 5th accesses the 6th position
     cout << "The height of the 6th student is: " << heights[5] << endl;
-    // Arrays start counting at 0 therefore 5 accesses the 6th position
+
+}
+/*Exercise #3 - Dynamic array with New.
+*  Same as Exercise 2, but using the new operator to let the user specify the number of
+students.
+ */
+void exercise3() {
+    int numStudents;
+    cout << "Enter the number of students: ";
+    cin >> numStudents;
+    float* heights = new float[_____];
+    for (int i = 0; i < numStudents; ++i) {
+        cout << "Student " << (i + 1) << ": ";
+        cin >> _____;
+    }
+    if (numStudents >= 6) {
+        cout << "The height of the 6th student is: " << _____ << endl;
+    } else {
+        cout << "There are less than 6 students." << endl;
+    }
+    _____ heights; // Free the memory
 }
 
 int main() {
