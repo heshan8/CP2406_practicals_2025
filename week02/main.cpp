@@ -81,17 +81,22 @@ void exercise5 () {
     ifstream inputFile;
     inputFile.open(inputFileName);
     if (!inputFile) { // Checking to see if the file failed to open.
-        cout << "Input file could not be opened :(" << endl;
-        return ;
+        cout << "Input file could not be opened" << endl;
+        return ; // exit progrma
     }
     // Opening the output file
     ofstream outputFile;
     outputFile.open(outputFileName);
     if (!inputFile) { // Error checking
-        cout << "Output file could not be opened :(" << endl;
+        cout << "Output file could not be opened" << endl;
         return ;
     }
 
+    // The loop reads line by line from the input file and writes each line to the output file
+    string line;
+    while (getline(inputFile, line)) {
+        outputFile << line << endl;
+    }
 
 
 }
