@@ -72,9 +72,9 @@ void exercise4 (int argc, char* argv[]) { // argc = argument count, argv = array
  */
 void exercise5 () {
     string inputFileName, outputFileName; // declaring both filenames as strings.
-    cout << "Enter Input file name: " <<endl; // Getting the filenames from user input.
+    cout << "Enter Input file name: " ; // Getting the filenames from user input.
     cin >> inputFileName;
-    cout << "Enter Output file name: " <<endl;
+    cout << "Enter Output file name: " ;
     cin >> outputFileName;
 
     // Opening the input file
