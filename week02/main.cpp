@@ -8,8 +8,8 @@ using namespace std;
 and the value using the Indirection operator.
 */
 void integerPointer() {
-    int age = 27; // Replace 21 with your actual age
-    int* agePtr = &age;
+    int age = 27;
+    int* agePtr = &age; //agePtr stores the address of age
     cout << "Address of age: " << agePtr << endl; //Prints the memory address of the integer variable
     cout << "Value of age using indirection: " << *agePtr << endl; // Prints the actual value of the address (27)
 }
@@ -97,9 +97,11 @@ void exercise5 () {
     while (getline(inputFile, line)) {
         outputFile << line << endl;
     }
+
     // Closing both files
     inputFile.close();
     outputFile.close();
+    cout << "Content copied to a new output file." ;
 
 }
 
