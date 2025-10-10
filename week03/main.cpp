@@ -1,5 +1,8 @@
 #include <iostream>
+using namespace std;
+
 int main() {
-    std::cout << "Week 03 running\n";
+    cout << "Week 02 practical running\n";
+    cout << "-----------------------------\n";
     return 0;
 }
