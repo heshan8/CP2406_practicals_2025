@@ -1,11 +1,8 @@
 #include <iostream>
 #include <iomanip>
+#include "carutils.h"
 using namespace std;
 // Program to calculate average speed and fuel efficiency
-// --- Function Headers ---
-// Also known as "function signatures" or "function prototypes"
-double calculateSpeed(double distanceKm, double timeHours);
-double fuelEfficiencyLPer100Km(double litresUsed, double distanceKm);
 
 int main() {
     cout << "Week 03 practical running\n";
@@ -33,6 +30,8 @@ int main() {
 
     return 0;
 }
+
+// --- Function Implementation ---
 // Takes in distance and time
 // Returns average speed in km/h
 double calculateSpeed(double distanceKm, double timeHours) {
