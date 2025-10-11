@@ -1,5 +1,4 @@
 #include <iostream>
-#include "car_utils.h"
 using namespace std;
 
 // --- Function Implementation ---
