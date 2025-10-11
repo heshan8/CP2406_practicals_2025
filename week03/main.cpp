@@ -1,9 +1,10 @@
 #include <iostream>
 #include <iomanip>
 using namespace std;
-
+// Program to calculate average speed and fuel efficiency
 // --- Function Headers ---
 // Also known as "function signatures" or "function prototypes"
+// Takes in distance and time
 // Returns average speed in km/h
 double calculateSpeed(double distanceKm, double timeHours) {
     if (timeHours <= 0) {
@@ -13,6 +14,7 @@ double calculateSpeed(double distanceKm, double timeHours) {
     return distanceKm / timeHours; // km/h
 }
 
+// Takes in Litres and Distance
 // Returns fuel efficiency in L/100 km
 double fuelEfficiencyLPer100Km(double litresUsed, double distanceKm) {
     if (distanceKm <= 0) {
@@ -43,7 +45,7 @@ int main() {
     double lPer100 = fuelEfficiencyLPer100Km(litres, distanceKm);
 
     // --- Print neatly ---
-    cout << fixed << setprecision(2);
+    cout << fixed << setprecision(2); // Format the output to two decimal places
     cout << "Average speed: " << speedKmh << " km/h\n";
     cout << "Fuel efficiency: " << lPer100 << " L/100 km\n";
 
