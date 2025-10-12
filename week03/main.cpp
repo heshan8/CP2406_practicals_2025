@@ -85,12 +85,12 @@ int main () {
     cout << "How many trips do you want to enter? ";
     cin >> numTrips;
 
-    // Using a vector to store trips
+    // Using a vector to store trip data
     vector<Trip> trips;
 
     // Get thr trip data from user and add them to the vector
     for (int i = 0; i < numTrips; i++) {
-        Trip trip;
+        Trip trip; // Creating an empty trip
         cout << "\nTrip " << (i + 1) << ":\n"; //Using (i + 1) to start trip counter from 1 instead of 0.
         cout << "Distance (Km): ";
         cin >> trip.distanceKm;
@@ -122,6 +122,17 @@ int main () {
     cout << "Total time: " << totalTime << " hours\n";
     cout << "Total litres: " << totalLitres << " L\n";
     cout << "--------------------------------------\n";
+
+    // Calling the functions and doing the calculations while passing in the prameters
+    double avgSpeed = calculateSpeed(totalDistance, totalTime);
+    double avgSpeedMs = speedInMetresPerSecond(avgSpeed);
+    double fuelEff = fuelEfficiencyLPer100Km(totalLitres, totalDistance);
+    double co2 = estimatedCO2Emissions(totalLitres);
+
+    cout << "Average speed: " << avgSpeed << " km/h\n";
+    cout << "Average speed in m/s: " << avgSpeedMs << " m/s\n";
+    cout << "Fuel efficiency: " << fuelEff << " L/100 km\n";
+    cout << "Estimated CO2 usage: " << co2 << " kg\n";
 
 
 }
