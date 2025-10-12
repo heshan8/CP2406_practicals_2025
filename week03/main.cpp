@@ -5,7 +5,7 @@
 #include "car_utils.h"
 using namespace std;
 // Program to calculate average speed and fuel efficiency
-/*
+/* Commented out for exercise 5
 // Displays the menu options
 void showMenu() {
     cout << "\n";
@@ -17,7 +17,7 @@ void showMenu() {
     cout << "5) Quit" << endl;
 }
 */
-/*
+/* Commented out for exercise 5
 int main() {
     int choice;
     do {
@@ -114,5 +114,14 @@ int main () {
         totalTime = totalTime + trip.timeHours;
         totalLitres = totalLitres + trip.litres;
     }
+
+    // Calculating and displaying the final results
+    cout << "\n----- TRIP SUMMARY -----\n";
+    cout << fixed << setprecision(2); // Formatting the output to 2 decimal places
+    cout << "Total distance: " << totalDistance << " km\n";
+    cout << "Total time: " << totalTime << " hours\n";
+    cout << "Total litres: " << totalLitres << " L\n";
+    cout << "--------------------------------------\n";
+
 
 }
