@@ -17,13 +17,14 @@ void showMenu() {
     cout << "5) Quit" << endl;
 }
 */
-/* Commented out for exercise 5
+/*Commented out for exercise 5
 int main() {
     int choice;
     do {
         showMenu();
         cout << "Enter your choice: ";
         cin >> choice;
+        // We could add input validation to the prompts to improve this program
         switch (choice) { // Fill in the variable to switch on
             case 1: { // Option for average speed (using cases 1-5 for 5 menu options)
                 double distance, time;
