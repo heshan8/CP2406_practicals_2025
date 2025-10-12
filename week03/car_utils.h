@@ -12,6 +12,7 @@ double calculateSpeed(double distanceKm, double timeHours);
 // Returns fuel efficiency in L/100 km
 double fuelEfficiencyLPer100Km(double litresUsed, double distanceKm);
 
+//----Exercise 2----
 // Returns speed in m/s given speed in km/h
 double speedInMetersPerSecond(double speedKmh);
 
