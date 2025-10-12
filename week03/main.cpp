@@ -4,6 +4,15 @@
 using namespace std;
 // Program to calculate average speed and fuel efficiency
 
+// Displays the menu options
+void showMenu() {
+    cout _____ "1) Calculate average speed (km/h)" _____;
+    cout _____ "2) Calculate fuel efficiency (L/100 km)" _____;
+    cout _____ "3) Convert speed from km/h to m/s" _____;
+    cout _____ "4) Estimate CO2 emissions" _____;
+    cout _____ "5) Quit" _____;
+}
+
 int main() {
     cout << "Week 03 practical running\n";
     cout << "-----------------------------\n";
