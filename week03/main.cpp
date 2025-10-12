@@ -86,6 +86,20 @@ int main () {
     cin >> numTrips;
 
     // Using a vector to store trips
-    vector<trip> trips;
+    vector<Trip> trips;
+
+    // Get thr trip data from user and add them to the vector
+    for (int i = 0; i < numTrips; i++) {
+        Trip trip;
+        cout << "\nTrip " << (i + 1) << ":\n"; //Using (i + 1) to start trip counter from 1 instead of 0.
+        cout << "Distance (Km): ";
+        cin >> trip.distanceKm;
+        cout << "Time (Hours): ";
+        cin >> trip.timeHours;
+        cout << "Fuel Used (Litres): ";
+        cin >> trip.litres;
+
+        trips.push_back(trip); // The values are appended to the end of the existing items in the vector.
+    }
 
 }
