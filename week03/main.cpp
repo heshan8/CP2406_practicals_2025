@@ -6,11 +6,11 @@ using namespace std;
 
 // Displays the menu options
 void showMenu() {
-    cout _____ "1) Calculate average speed (km/h)" _____;
-    cout _____ "2) Calculate fuel efficiency (L/100 km)" _____;
-    cout _____ "3) Convert speed from km/h to m/s" _____;
-    cout _____ "4) Estimate CO2 emissions" _____;
-    cout _____ "5) Quit" _____;
+    cout << "1) Calculate average speed (km/h)" << endl;
+    cout << "2) Calculate fuel efficiency (L/100 km)" << endl;
+    cout << "3) Convert speed from km/h to m/s" << endl;
+    cout << "4) Estimate CO2 emissions" << endl;
+    cout << "5) Quit" << endl;
 }
 
 int main() {
