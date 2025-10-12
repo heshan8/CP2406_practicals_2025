@@ -1,5 +1,7 @@
 #include <iostream>
 #include <iomanip>
+#include <vector>
+
 #include "car_utils.h"
 using namespace std;
 // Program to calculate average speed and fuel efficiency
@@ -82,5 +84,8 @@ int main () {
     int numTrips;
     cout << "How many trips do you want to enter? ";
     cin >> numTrips;
+
+    // Using a vector to store trips
+    vector<trip> trips;
 
 }
