@@ -82,7 +82,7 @@ struct Trip {
 int main () {
     // Ask the user how many trips they need analyzed
     int numTrips;
-    cout << "How many trips do you want to enter? ";
+    cout << "How many trips do you want to analyze? ";
     cin >> numTrips;
 
     // Using a vector to store trip data
@@ -90,7 +90,7 @@ int main () {
 
     // Get thr trip data from user and add them to the vector
     for (int i = 0; i < numTrips; i++) {
-        Trip trip; // Creating an empty trip
+        Trip trip; // Creating an empty struct
         cout << "\nTrip " << (i + 1) << ":\n"; //Using (i + 1) to start trip counter from 1 instead of 0.
         cout << "Distance (Km): ";
         cin >> trip.distanceKm;
@@ -121,7 +121,7 @@ int main () {
     cout << "Total distance: " << totalDistance << " km\n";
     cout << "Total time: " << totalTime << " hours\n";
     cout << "Total litres: " << totalLitres << " L\n";
-    cout << "--------------------------------------\n";
+    cout << "--------------------------------------\n"; // Line to separate trip summary and analysis
 
     // Calling the functions and doing the calculations while passing in the prameters
     double avgSpeed = calculateSpeed(totalDistance, totalTime);
@@ -129,6 +129,7 @@ int main () {
     double fuelEff = fuelEfficiencyLPer100Km(totalLitres, totalDistance);
     double co2 = estimatedCO2Emissions(totalLitres);
 
+    //Shows the output neatly
     cout << "Average speed: " << avgSpeed << " km/h\n";
     cout << "Average speed in m/s: " << avgSpeedMs << " m/s\n";
     cout << "Fuel efficiency: " << fuelEff << " L/100 km\n";
