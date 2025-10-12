@@ -15,6 +15,13 @@ void showMenu() {
     cout << "5) Quit" << endl;
 }
 
+// Define the Trip struct
+struct Trip {
+    double distanceKm;
+    double timeHours;
+    double litres;
+};
+
 int main() {
     int choice;
     do {
