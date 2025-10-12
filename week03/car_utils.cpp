@@ -23,14 +23,16 @@ double fuelEfficiencyLPer100Km(double litresUsed, double distanceKm) {
 }
 
 //----Exercise 2----
-// Returns speed in metres/s given speed in km/h
+// converts speed from kilometers per hour to meters per second using the conversion factor 1000/3600
 double speedInMetersPerSecond(double speedKmh) {
     // 1 km/h = 1000/3600 m/s = 0.27778 m/s
     return speedKmh * (1000/3600.0);
+    // Returns speed in metres per second
 }
 
-// Estimates CO2 emissions (kg) given litres of petrol used
+// calculates CO2 emissions by multiplying litres of petrol by the standard emission factor of 2.31 kg
 double estimatedCO2Emissions(double  litres) {
     // Use 2.31 kg CO2 per litre of petrol (standard emission factor)
     return litres * 2.31;
+    //Returns estimated C02 emissions
 }
