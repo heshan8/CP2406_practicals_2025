@@ -102,4 +102,17 @@ int main () {
         trips.push_back(trip); // The values are appended to the end of the existing items in the vector.
     }
 
+
+    // Create variables to hold totals (start at 0)
+    double totalDistance = 0;
+    double totalTime = 0;
+    double totalLitres = 0;
+
+    // Adding the value of each trip to the total
+    for (const Trip& trip : trips) { //This loop goes through each Trip in the trips vector one by one
+        totalDistance = totalDistance + trip.distanceKm;
+        totalTime = totalTime + trip.timeHours;
+        totalLitres = totalLitres + trip.litres;
+    }
+
 }
