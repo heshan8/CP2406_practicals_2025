@@ -3,7 +3,7 @@
 #include "car_utils.h"
 using namespace std;
 // Program to calculate average speed and fuel efficiency
-
+/*
 // Displays the menu options
 void showMenu() {
     cout << "\n";
@@ -14,14 +14,8 @@ void showMenu() {
     cout << "4) Estimate CO2 emissions" << endl;
     cout << "5) Quit" << endl;
 }
-
-// Define the Trip struct
-struct Trip {
-    double distanceKm;
-    double timeHours;
-    double litres;
-};
-
+*/
+/*
 int main() {
     int choice;
     do {
@@ -74,4 +68,19 @@ int main() {
     } while (choice !=5); // Fill in the quit value
     return 0;
 }
+*/
 
+//Exercise #5 - Trip Analyzer
+// Define the Trip struct
+struct Trip {
+    double distanceKm;
+    double timeHours;
+    double litres;
+};
+int main () {
+    // Ask the user how many trips they need analyzed
+    int numTrips;
+    cout << "How many trips do you want to enter? ";
+    cin >> numTrips;
+
+}
