@@ -6,6 +6,8 @@ using namespace std;
 
 // Displays the menu options
 void showMenu() {
+    cout << "\n";
+    cout << "-------Trip Info Calculator-------" << endl;
     cout << "1) Calculate average speed (km/h)" << endl;
     cout << "2) Calculate fuel efficiency (L/100 km)" << endl;
     cout << "3) Convert speed from km/h to m/s" << endl;
