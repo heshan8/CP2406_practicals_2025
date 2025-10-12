@@ -12,4 +12,9 @@ double calculateSpeed(double distanceKm, double timeHours);
 // Returns fuel efficiency in L/100 km
 double fuelEfficiencyLPer100Km(double litresUsed, double distanceKm);
 
+// Returns speed in m/s given speed in km/h
+double ____________(____________ ____________);
+// Estimates CO2 emissions (kg) given litres of petrol used
+double ____________(____________ ____________);
+
 #endif //CP2406_PRACTICALS_2025_CAR_UTILS_H

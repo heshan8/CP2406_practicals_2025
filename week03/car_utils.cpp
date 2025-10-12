@@ -21,3 +21,14 @@ double fuelEfficiencyLPer100Km(double litresUsed, double distanceKm) {
     }
     return (litresUsed / distanceKm) * 100.0; // L/100 km
 }
+
+// Returns speed in m/s given speed in km/h
+double ____________(____________ ____________) {
+    // 1 km/h = 1000/3600 m/s = 0.27778 m/s
+    return ____________ * ____________;
+}
+// Estimates CO2 emissions (kg) given litres of petrol used
+double ____________(____________ ____________) {
+    // Use 2.31 kg CO2 per litre of petrol (standard emission factor)
+    return ____________ * ____________;
+}
