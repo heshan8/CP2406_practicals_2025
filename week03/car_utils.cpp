@@ -24,7 +24,7 @@ double fuelEfficiencyLPer100Km(double litresUsed, double distanceKm) {
 
 //----Exercise 2----
 // converts speed from kilometers per hour to meters per second using the conversion factor 1000/3600
-double speedInMetersPerSecond(double speedKmh) {
+double speedInMetresPerSecond(double speedKmh) {
     // 1 km/h = 1000/3600 m/s = 0.27778 m/s
     return speedKmh * (1000/3600.0);
     // Returns speed in metres per second

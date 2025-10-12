@@ -14,7 +14,7 @@ double fuelEfficiencyLPer100Km(double litresUsed, double distanceKm);
 
 //----Exercise 2----
 // Returns speed in m/s given speed in km/h
-double speedInMetersPerSecond(double speedKmh);
+double speedInMetresPerSecond(double speedKmh);
 
 // Estimates CO2 emissions (kg) given litres of petrol used
 double estimatedCO2Emissions(double litres);
