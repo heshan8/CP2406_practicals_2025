@@ -1,0 +1,1 @@
+add_executable(week05 main.cpp)
