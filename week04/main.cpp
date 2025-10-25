@@ -48,6 +48,22 @@ void exercise4() {
 
 int main() {
     cout << "Week 04 practical running" << endl;
+    int choice;
+    cout << "Pick an exercise to run" << endl;
+    cout << "(3) Exercise 3 - Age validater with exceptions" << endl;
+    cout << "(4) Exercise 4 - Age validator and Logger" << endl;
+    cout << "Enter choice: ";
+    cin >> choice;
+    cin.ignore();
+
+    switch (choice) {
+        case 3:
+            exercise3();
+            break;
+        case 4:
+            exercise4();
+            break;
+    }
 
     return 0;
 }
