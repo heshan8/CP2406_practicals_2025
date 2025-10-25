@@ -63,7 +63,8 @@ int main() {
         case 4:
             exercise4();
             break;
+        default:
+            cout << "Invalid choice\n";
     }
-
     return 0;
 }
