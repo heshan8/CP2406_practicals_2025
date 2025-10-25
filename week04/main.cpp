@@ -4,10 +4,6 @@
 #include <cctype>
 using namespace std;
 
-/*Exercise 3 — Age Input with Exceptions
- * A program to validate an age.
- */
-
 // Checks if the string contains only digits
 // Also checks for + or - with the number
 bool isInteger(const string& s) {
@@ -16,15 +12,14 @@ bool isInteger(const string& s) {
     //Check if the first character is a + or - sign
     //If yes, start checking from index 1 (skipping the +-)
     //If not, start checking from index 0
-        if (i == s.size()) return false; // If the string is only an operator(-+), returns false
+    if (i == s.size()) return false; // If the string is only an operator(-+), returns false
     for (; i < s.size(); ++i)
         if (!isdigit(static_cast<unsigned char>(s[i]))) // For each character, check if it's a digit, if not return false
             return false;
     return true; // If all checks are passed, the string is a valid integer returning true.
 }
 
-int main() {
-    cout << "Week 01 practical running" << endl;
+void exercise3 () {
     cout << "Enter age: ";
     string token; getline(cin, token);
     try {
@@ -36,7 +31,7 @@ int main() {
         if (age < 0) throw invalid_argument("Age cannot be negative"); // Because it's a negative number
         if (age > 130) throw out_of_range("Age out of range"); // Because it's out of range (>130)
         cout << "Valid age: " << age << "\n";
-    // Catches need to match the thrown exception types
+        // Catches need to match the thrown exception types
     } catch (const invalid_argument& ex) {
         cerr << "Invalid argument: " << ex.what() << "\n";
     } catch (const out_of_range& ex) {
@@ -44,5 +39,15 @@ int main() {
     } catch (const exception& ex) {
         cerr << "Other error: " << ex.what() << "\n";
     }
+}
+
+void exercise4() {
+    cout << "Age Validator & Logger\n";
+    // Exercise 4 TBD
+}
+
+int main() {
+    cout << "Week 04 practical running" << endl;
+
     return 0;
 }
