@@ -45,8 +45,9 @@ void exercise3 () {
 
 void exercise4() {
     cout << "Age Validator & Logger\n";
+    cout << "----------------------\n";
     ofstream log("errors.log", ios::app);
-    cout << "Log file with errors will be at: " << filesystem::current_path() << "/errors.log\n";
+    cout << "Log file save location: " << filesystem::current_path() << "/errors.log\n";
     int validCount = 0, invalidCount = 0, total = 0;
     while (true) {
         cout << "Enter age (Q to quit): ";
