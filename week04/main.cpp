@@ -4,6 +4,7 @@
 #include <cctype>
 #include <fstream>
 #include <filesystem>
+#include <cassert> //FOr assert statements
 using namespace std;
 
 // Checks if the string contains only digits
@@ -82,10 +83,37 @@ void exercise4() {
     cout << "Total=" << total << ", valid=" << validCount << ", invalid=" << invalidCount << "\n";
 }
 
+// Bonus - Add unit-style tests (asserts) for helper functions, e.g., isInteger
+void testIsInteger () {
+    cout << "\nRunning isInteger tests... \n";
+
+    // Testing valid integers
+    assert(isInteger("143") == true);
+    assert(isInteger("-31") == true);
+    assert(isInteger("+155") == true);
+    assert(isInteger("0") == true);
+
+    // Test invalid input - decimals
+    assert(isInteger("23.5") == false);
+    assert(isInteger("3.4") == false);
+
+    // Test invalid input - letters
+    assert(isInteger("acf") == false);
+    assert(isInteger("sacS4M") == false);
+
+    // Test invalid input - special cases
+    assert(isInteger("-") == false); //Only operator
+    assert(isInteger("+") == false); //Only operator
+    assert(isInteger("") == false); // Empty string
+
+    cout << "All tests passed\n\n";
+}
 
 int main() {
     cout << "Week 04 practical running" << endl;
     cout << "-------------------------" << endl;
+    // Bonus - Run tests for isInteger
+    testIsInteger();
     int choice;
     cout << "Pick an exercise to run" << endl;
     cout << "(3) Exercise 3 - Age validator with exceptions" << endl;
