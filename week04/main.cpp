@@ -56,15 +56,15 @@ void exercise4() {
                 // Not a pure integer string -> could be decimal or contains letters
                 throw invalid_argument("Age must be a whole number");
             }
-            long age = stol(token);
-            if (age < 0) throw invalid_argument("Age cannot be negative"); // Because it's a negative number
-            if (age > 130) throw out_of_range("Age out of range"); // Because it's out of range (>130)
-            cout << "Valid age: " << age << "\n";
             // validate and convert -> int age
+            long age = stol(token);
             // throw invalid_argument for non-integer/decimal/negative
+            if (age < 0) throw invalid_argument("Age cannot be negative"); // Because it's a negative number
             // throw out_of_range for > 130
+            if (age > 130) throw out_of_range("Age out of range"); // Because it's out of range (>130)
             // if OK:
             cout << "Valid age: " << age << "\n";
+
             ++validCount;
         } catch (const exception& ex) {
             ++invalidCount;
