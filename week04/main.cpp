@@ -55,7 +55,7 @@ void exercise4() {
     cout << "Age Validator & Logger\n";
     cout << "----------------------\n";
     ofstream log("errors.log", ios::app); //Add to file without overwriting file content
-    cout << "Log file save location: " << filesystem::current_path() << "/errors.log\n";
+    cout << "Log file save location: " << filesystem::current_path() << "/errors.log\n"; // Shows where the log file is saved
     int validCount = 0, invalidCount = 0, total = 0;
     while (true) {
         cout << "Enter age (Q to quit): ";
@@ -70,7 +70,6 @@ void exercise4() {
             long age = stol(token);
             if (age < 0) throw invalid_argument("Age cannot be negative"); // Because it's a negative number
             if (age > 130) throw out_of_range("Age out of range"); // Because it's out of range (>130)
-            // if OK:
             cout << "Valid age: " << age << "\n";
 
             ++validCount;
@@ -106,7 +105,7 @@ void testIsInteger () {
     assert(isInteger("+") == false); //Only operator
     assert(isInteger("") == false); // Empty string
 
-    cout << "All tests passed\n\n";
+    cout << "All tests passed.\n\n";
 }
 
 int main() {
