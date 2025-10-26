@@ -3,6 +3,7 @@
 #include <stdexcept>
 #include <cctype>
 #include <fstream>
+#include <filesystem>
 using namespace std;
 
 // Checks if the string contains only digits
@@ -45,6 +46,7 @@ void exercise3 () {
 void exercise4() {
     cout << "Age Validator & Logger\n";
     ofstream log("errors.log", ios::app);
+    cout << "Log file with errors will be at: " << filesystem::current_path() << "/errors.log\n";
     int validCount = 0, invalidCount = 0, total = 0;
     while (true) {
         cout << "Enter age (Q to quit): ";
@@ -54,13 +56,10 @@ void exercise4() {
         try {
             if (isInteger(token) == false) { // Using isInteger to check if the string is digits, returns true or false
                 // Not a pure integer string -> could be decimal or contains letters
-                throw invalid_argument("Age must be a whole number");
+                throw invalid_argument("Age must be a whole number (Do not include letters)");
             }
-            // validate and convert -> int age
             long age = stol(token);
-            // throw invalid_argument for non-integer/decimal/negative
             if (age < 0) throw invalid_argument("Age cannot be negative"); // Because it's a negative number
-            // throw out_of_range for > 130
             if (age > 130) throw out_of_range("Age out of range"); // Because it's out of range (>130)
             // if OK:
             cout << "Valid age: " << age << "\n";
@@ -80,6 +79,7 @@ void exercise4() {
 
 int main() {
     cout << "Week 04 practical running" << endl;
+    cout << "-------------------------" << endl;
     int choice;
     cout << "Pick an exercise to run" << endl;
     cout << "(3) Exercise 3 - Age validater with exceptions" << endl;
