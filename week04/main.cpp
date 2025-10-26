@@ -21,6 +21,10 @@ bool isInteger(const string& s) {
     return true; // If all checks are passed, the string is a valid integer returning true.
 }
 
+/*Exercise 3 - Age Input with Exceptions
+*  a program that reads an age and throws/catches exceptions for negatives,
+decimals, or out-of-range values.
+ */
 void exercise3 () {
     cout << "Enter age: ";
     string token; getline(cin, token);
@@ -43,10 +47,13 @@ void exercise3 () {
     }
 }
 
+/*Exercise 4 - Age Validator & Logger
+* A small application that validates multiple ages until the user
+enters Q to quit, counts valid vs invalid entries, and logs errors to a file*/
 void exercise4() {
     cout << "Age Validator & Logger\n";
     cout << "----------------------\n";
-    ofstream log("errors.log", ios::app);
+    ofstream log("errors.log", ios::app); //Add to file without overwriting file content
     cout << "Log file save location: " << filesystem::current_path() << "/errors.log\n";
     int validCount = 0, invalidCount = 0, total = 0;
     while (true) {
@@ -69,12 +76,10 @@ void exercise4() {
         } catch (const exception& ex) {
             ++invalidCount;
             cerr << ex.what() << "\n";
-            if (log) log << "Input='" << token << "' error=" <<
-            ex.what() << "\n";
+            if (log) log << "Input='" << token << "' error=" << ex.what() << "\n";
         }
     }
-    cout << "Total=" << total << ", valid=" << validCount
-    << ", invalid=" << invalidCount << "\n";
+    cout << "Total=" << total << ", valid=" << validCount << ", invalid=" << invalidCount << "\n";
 }
 
 
@@ -83,7 +88,7 @@ int main() {
     cout << "-------------------------" << endl;
     int choice;
     cout << "Pick an exercise to run" << endl;
-    cout << "(3) Exercise 3 - Age validater with exceptions" << endl;
+    cout << "(3) Exercise 3 - Age validator with exceptions" << endl;
     cout << "(4) Exercise 4 - Age validator and Logger" << endl;
     cout << "Enter choice: ";
     cin >> choice;
